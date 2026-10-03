@@ -1,0 +1,30 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include<stdio.h>
+int main()
+{
+    // Reverse a number
+    int n,num,rem;
+    long int revnum=0;
+    printf("Enter a number :");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+        {
+        num=n;
+        rem=n%10;
+        n=n/10;
+        revnum=(revnum*10)+rem;
+        }
+    if(revnum==num)
+    {
+        printf("The reversed number is equivalent to original number");
+    }
+    else
+    {
+        printf("Not equivalent");
+    }
+    return(0);
+}
+ 
+
