@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    // Reverse a 5 digit number
+    int n, num, rem;
+    long int revnum = 0;
+    printf("Enter a number :");
+    scanf("%d", &n);
+    
+    num = n;
+    
+    // Step 1
+    rem = n % 10;
+    n = n / 10;
+    revnum = revnum + rem * 10000;
+
+    // Step 2
+    rem = n % 10;
+    n = n / 10;
+    revnum = revnum + rem * 1000;
+
+    // Step 3
+    rem = n % 10;
+    n = n / 10;
+    revnum = revnum + rem * 100;
+
+    // Step 4
+    rem = n % 10;
+    n = n / 10; 
+    revnum = revnum + rem * 10;
+
+    // Step 5
+    rem = n % 10;
+    revnum = revnum + rem * 1; 
+
+    if(revnum == num)
+    {
+        printf("both are equivalent");
+    }
+    else
+    {
+        printf("Not equivalent");
+    }
+    
+    return 0;
+}
