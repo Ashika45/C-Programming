@@ -1,0 +1,29 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include<stdio.h>
+
+#include<math.h>
+
+ int main()
+{
+    //Compound Interest
+
+    float a,p,r,n,q;
+    for(int i=0;i<1;i++)
+        {
+        printf("Enter the principal amount : ");
+        scanf("%f",&p);
+        printf("Enter the rate of interest : ");
+        scanf("%f",&r);
+        printf("Enter the no.of.years : ");
+        scanf("%f",&n);
+        printf("Enter the compounding period : ");
+        scanf("%f",&q);
+            a=p*pow((1+(r/q)),(n/q));
+            printf("\n Total Amount : %f",a);
+        }
+    return(0);
+ 
+}
+
