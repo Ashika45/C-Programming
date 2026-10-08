@@ -1,0 +1,25 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include <stdio.h>
+
+int main() {
+int s;
+    printf("Enter the choice : ");
+    scanf("%d",&s);
+    switch(s)
+        {
+            case 1:
+            printf("One");
+            break;
+            case 2:
+            printf("Two");
+            break;
+            case 3:
+            printf("Three");
+            break;
+            default:
+            printf("Enter the values from 1 to 3 only ...");
+        }
+        
+}
