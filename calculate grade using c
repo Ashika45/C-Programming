@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() 
+{
+    int t, e, m, s, ss, tot;
+    float avg;
+    
+    printf("Enter the marks : ");
+    scanf("%d%d%d%d%d", &t, &e, &m, &s, &ss);
+    
+    tot = t + e + m + ss + s;
+    
+    // FIX 1: Typecast tot to float so we don't lose decimal values
+    avg = (float)tot / 5;
+    
+    printf("Total : %d", tot);
+    
+    // FIX 2: Changed %d to %f because avg is a float variable
+    printf("\n Average : %.2f", avg); 
+    
+    if(t >= 35 && e >= 35 && m >= 35 && ss >= 35 && s >= 35)
+    {
+        // FIX 3: Changed <= to < on upper limits to prevent overlapping ranges
+        if(avg >= 90 && avg <= 100)
+        {
+            printf("\n grade A");
+        }
+        else if(avg >= 80 && avg < 90) 
+        {
+            printf("\n grade B");
+        }
+        else if(avg >= 70 && avg < 80)
+        {
+            printf("\n grade C");
+        }
+        else if(avg >= 60 && avg < 70)
+        {
+            printf("\n grade D");
+        }
+        else 
+        {
+            printf("\n Fail");
+        }
+    }
+    else 
+    {
+        // Added this so it prints something if they fail an individual subject
+        printf("\n Result: Fail (Scored below 35 in a subject)");
+    }
+    
+    return 0;
+}
