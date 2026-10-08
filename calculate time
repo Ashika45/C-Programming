@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() 
+{
+        int min,hr=0,sec;
+        printf("Enter the seconds : ");
+        scanf("%d",&sec);
+        min=sec/60;
+        sec=sec%60;
+        if(min>=60)
+        {
+                hr=min/60;
+                min=min%60;                
+        }
+        if(hr!=0)
+        {
+                printf("The hour is :%d",hr);
+                printf("\n The minute is:%d",min);
+                printf("\n The second is:%d",sec);
+        }
+        else
+        {
+                printf("Invalid");
+        }
+}
+
