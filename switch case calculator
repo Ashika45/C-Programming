@@ -1,0 +1,38 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include <stdio.h>
+
+int main() 
+{
+    int a,b,ch,c;
+    float d;
+    printf(" 1.Addition \n 2.subtraction \n 3.Multiplication \n 4.Division");
+    printf("\n Enter your choice : ");
+    scanf("%d",&ch);
+    printf("\n Enter the two numbers :");
+    scanf("%d%d",&a,&b);
+    switch(ch)
+        {
+            case 1:
+            c=a+b;
+            printf("Result :%d",c);
+            break;
+            case 2:
+            c=a-b;
+            printf("Result :%d",c);
+            break;
+            case 3:
+            c=a*b;
+            printf("Result :%d",c);
+            break;
+            case 4:
+            d = (float)a / b; 
+            printf("Result : %f\n", d);
+            break;
+            default:
+            printf("out of choice...");
+            
+        }
+
+}
