@@ -1,0 +1,32 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include <stdio.h>
+void prime(int);
+int main()
+{
+        int n;
+        printf("Enter the number : ");
+        scanf("%d",&n);
+        prime(n);
+}
+void prime(int n)
+{
+    int i = 2;
+    printf("The prime factor of the given number is : ");
+    while(n > 1)
+    {
+        if(n % i == 0)
+        {
+            printf("%d ", i); // Print the factor 'i'
+            n = n / i;        // Divide n by the factor 'i'
+        }
+        else
+        {
+            i++;              // Only increment 'i' if it's not a factor
+        }
+    }
+}
+
+   
+   
