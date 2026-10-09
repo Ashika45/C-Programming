@@ -1,0 +1,28 @@
+// Online C compiler (editor)
+// Write and run C online using this editor.
+
+#include <stdio.h>
+
+int main()
+{
+    int i,n=2;
+    printf("prime numbers from 1 to 300...");
+    while(n<=300)
+        {
+            i=2;
+            while(i<n)
+                {
+                    if(n%i==0)
+                    break;
+
+                    else
+                    i++;
+                }
+        
+    if(n==i)
+    {
+        printf("\n %d",n);
+    }
+    n++;
+}
+}
