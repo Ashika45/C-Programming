@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() 
+{
+    int n;
+   printf("Enter the num : ");
+   scanf("%d",&n);
+   printf("\n Post Increment : %d",n++);
+   printf("\n pre Increment : %d",++n);
+    printf("\n Post decrement : %d",n--);
+   printf("\n pre decrement : %d",--n);
+}
