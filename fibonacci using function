@@ -1,0 +1,24 @@
+#include <stdio.h>
+void fibo(int,int);
+int main() 
+{
+    int old=0,curr=1;
+    printf("%d\n%d",old,curr);
+    fibo(old,curr);
+}
+void fibo(int old,int curr)
+{
+    static int terms=2;
+    int new;
+    if(terms<20)
+        {
+         terms++;
+         new=old+curr;
+         printf("%d\n",new);
+         fibo(curr,new);
+        }
+    else
+    {
+        return ;
+    }
+}
